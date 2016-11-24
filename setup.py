@@ -7,5 +7,5 @@ setup(name='microdadosIBGE',
       author='Andre Mello',
       author_email='andre.tgmello@gmail.com',
       license='MIT',
-      packages=['microdadosIBGE'],
+      packages=['microdadosibge'],
       zip_safe=False)
