@@ -1,6 +1,19 @@
-from math import floor, log10
+from math import floor, log10, isnan
 
 def combineToFloat(a, b):
-    if b == 0:
+    n = False
+    if a < 0:
+        n = True
+        a = -a
+    if b < 0:
+        n = True
+        b = -b
+    elif b == 0:
         return a
-    return int(a) + b * 10**-(floor(log10(b))+1)
+
+    result = a + b * 10**-(floor(log10(b))+1)
+
+    if n:
+        return -result
+    else:
+        return result
